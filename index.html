@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AUZZMODE</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
@@ -138,31 +139,60 @@
       transform: translate(2px, 2px);
       box-shadow: 2px 2px 0 #fff;
     }
-    /* ── Play button ── */
-    .play-btn {
-      display: inline-flex;
+    /* ── Games section ── */
+    .games-section {
+      margin-bottom: 48px;
+      text-align: center;
+    }
+    .games-title {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.9rem;
+      color: var(--yellow);
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+    .game-cards {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .game-card {
+      display: flex;
+      flex-direction: column;
       align-items: center;
       gap: 10px;
-      background: var(--yellow);
-      color: #000;
-      font-family: 'Press Start 2P', monospace;
-      font-size: 0.8rem;
-      letter-spacing: 0.04em;
+      background: var(--card);
+      border: 3px solid var(--yellow);
+      box-shadow: 4px 4px 0 var(--yellow);
+      padding: 28px 32px;
       text-decoration: none;
-      padding: 16px 28px;
-      border-radius: 0;
-      border: 3px solid #000;
-      box-shadow: 4px 4px 0 #000;
+      color: var(--text);
+      width: 200px;
       transition: transform 0.1s, box-shadow 0.1s;
-      margin-bottom: 20px;
     }
-    .play-btn:hover {
+    .game-card:hover {
       transform: translate(-2px, -2px);
-      box-shadow: 6px 6px 0 #000;
+      box-shadow: 6px 6px 0 var(--yellow);
     }
-    .play-btn:active {
+    .game-card:active {
       transform: translate(2px, 2px);
-      box-shadow: 2px 2px 0 #000;
+      box-shadow: 2px 2px 0 var(--yellow);
+    }
+    .game-icon { font-size: 2.5rem; }
+    .game-name {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.65rem;
+      color: var(--yellow);
+      letter-spacing: 0.04em;
+      text-align: center;
+      line-height: 1.6;
+    }
+    .game-desc {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.5;
     }
 
     .yt-btn svg {
@@ -236,9 +266,21 @@
 
     <p class="tagline">GAMING · <span>CREATING</span> · HAVING FUN<span class="cursor"></span></p>
 
-    <a class="play-btn" href="game.html">
-      ⚡ PLAY CHAOS MODE
-    </a>
+    <div class="games-section">
+      <h2 class="games-title">🕹️ GAMES</h2>
+      <div class="game-cards">
+        <a class="game-card" href="game.html">
+          <div class="game-icon">⚡</div>
+          <div class="game-name">CHAOS MODE</div>
+          <div class="game-desc">Obstacles, explosions & mayhem</div>
+        </a>
+        <a class="game-card" href="game-3d.html">
+          <div class="game-icon">🏃</div>
+          <div class="game-name">3D RACE</div>
+          <div class="game-desc">Full 3D stickman racing action</div>
+        </a>
+      </div>
+    </div>
 
     <a class="yt-btn" href="https://www.youtube.com/@auzzmode" target="_blank" rel="noopener">
       <!-- YouTube icon -->
